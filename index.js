@@ -64,6 +64,7 @@ document.addEventListener('keyup', function(e){
 
 move(character).to(100, 250)
 
+//left off on 4) Refactoring Our Code
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
