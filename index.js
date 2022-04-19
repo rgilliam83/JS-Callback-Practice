@@ -58,13 +58,29 @@ document.addEventListener('keydown', function(e){
     }
 })
 
-document.addEventListener('keyup', function(e){
+document.addEventListener('keyup', function(){
     direction = null
 })
 
 move(character).to(100, 250)
 
-//left off on 4) Refactoring Our Code
+function move(element) {
+    element.style.position = 'fixed'
+
+    function moveToCoordinates(left, bottom){
+        element.style.left = left + 'px'
+        element.style.bottom = bottom + 'px'
+    }
+
+    function moveWithArrowKeys(left, bottom){
+
+    }
+
+    return {
+        to: moveToCoordinates,
+        moveWithArrowKeys: moveWithArrowKeys
+    }
+}
 
 move(newImage('assets/tree.png')).to(200, 450)
 move(newImage('assets/pillar.png')).to(350, 250)
